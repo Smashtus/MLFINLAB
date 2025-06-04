@@ -1,9 +1,15 @@
-# Always prefer setuptools over distutils
-from setuptools import setup
+from setuptools import find_packages, setup
 
-setup()
-
-# Create package
-# python setup.py bdist_wheel
-# python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*  (This is the test repo)
-# twine upload dist/*  (This is official repo)
+setup(
+    name="ml_labeling_addons",
+    version="0.1.0",
+    packages=find_packages(),
+    install_requires=[
+        # Add any dependencies here
+    ],
+    entry_points={
+        "console_scripts": [
+            # Add any command-line scripts here
+        ],
+    },
+)
